@@ -1,0 +1,443 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   StreamFlix - Your Ultimate OTT Platform
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col">
+  <!-- Header / Navbar -->
+  <header class="bg-gray-800 sticky top-0 z-50 shadow">
+   <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+    <a class="text-3xl font-bold text-red-600 tracking-wide" href="#">
+     StreamFlix
+    </a>
+    <nav class="hidden md:flex space-x-8 text-gray-300 font-semibold">
+     <a class="hover:text-red-600 transition" href="#">
+      Home
+     </a>
+     <a class="hover:text-red-600 transition" href="#">
+      Movies
+     </a>
+     <a class="hover:text-red-600 transition" href="#">
+      TV Shows
+     </a>
+     <a class="hover:text-red-600 transition" href="#">
+      New &amp; Popular
+     </a>
+     <a class="hover:text-red-600 transition" href="#">
+      My List
+     </a>
+    </nav>
+    <div class="flex items-center space-x-4">
+     <button aria-label="Search" class="text-gray-300 hover:text-red-600 transition hidden md:block">
+      <i class="fas fa-search fa-lg">
+      </i>
+     </button>
+     <button aria-label="Notifications" class="text-gray-300 hover:text-red-600 transition hidden md:block">
+      <i class="fas fa-bell fa-lg">
+      </i>
+     </button>
+     <img alt="User profile avatar showing a person silhouette with a dark background" class="w-10 h-10 rounded-full object-cover cursor-pointer" height="40" src="/IMG_20250226_144439.jpg" width="40"/>
+    </div>
+    <button aria-label="Toggle menu" class="md:hidden text-gray-300 hover:text-red-600 focus:outline-none" id="mobile-menu-button">
+     <i class="fas fa-bars fa-lg">
+     </i>
+    </button>
+   </div>
+   <!-- Mobile Menu -->
+   <nav class="hidden md:hidden bg-gray-800 px-4 pb-4 space-y-3 text-gray-300 font-semibold" id="mobile-menu">
+    <a class="block hover:text-red-600 transition" href="#">
+     Home
+    </a>
+    <a class="block hover:text-red-600 transition" href="#">
+     Movies
+    </a>
+    <a class="block hover:text-red-600 transition" href="#">
+     TV Shows
+    </a>
+    <a class="block hover:text-red-600 transition" href="#">
+     New &amp; Popular
+    </a>
+    <a class="block hover:text-red-600 transition" href="#">
+     My List
+    </a>
+   </nav>
+  </header>
+  <!-- Hero Section -->
+  <section class="relative w-full max-w-full h-[60vh] md:h-[75vh] lg:h-[85vh] overflow-hidden">
+   <img alt="Epic cinematic scene from a blockbuster movie with dramatic lighting and characters in action" class="w-full h-full object-cover brightness-75" height="800" loading="eager" src="https://storage.googleapis.com/a1aa/image/bab8110c-6559-4185-ce98-a183c2df2c4c.jpg" width="1920"/>
+   <div class="absolute bottom-12 left-6 md:left-12 max-w-xl text-white space-y-4 drop-shadow-lg">
+    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+     Stream the Latest Blockbusters
+    </h1>
+    <p class="text-lg md:text-xl max-w-md">
+     Unlimited movies, TV shows, and more. Watch anywhere. Cancel anytime.
+    </p>
+    <div class="flex space-x-4">
+     <button class="bg-red-600 hover:bg-red-700 transition px-6 py-3 rounded font-semibold flex items-center space-x-2">
+      <i class="fas fa-play">
+      </i>
+      <span>
+       Watch Now
+      </span>
+     </button>
+     <button class="bg-gray-700 bg-opacity-70 hover:bg-opacity-90 transition px-6 py-3 rounded font-semibold flex items-center space-x-2">
+      <i class="fas fa-info-circle">
+      </i>
+      <span>
+       More Info
+      </span>
+     </button>
+    </div>
+   </div>
+  </section>
+  <!-- Categories Section -->
+  <section class="container mx-auto px-4 py-10">
+   <h2 class="text-3xl font-bold mb-6 text-white">
+    Browse by Category
+   </h2>
+   <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
+    <a class="group block rounded overflow-hidden shadow-lg relative" href="#">
+     <img alt="Action movie category image showing explosions and a heroic figure in dynamic pose" class="w-full h-36 object-cover group-hover:scale-105 transition-transform duration-300" height="225" loading="lazy" src="https://storage.googleapis.com/a1aa/image/8d18e988-b6c0-4a42-e373-a285d66a52a2.jpg" width="400"/>
+     <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+      <span class="text-white text-lg font-semibold">
+       Action
+      </span>
+     </div>
+    </a>
+    <a class="group block rounded overflow-hidden shadow-lg relative" href="#">
+     <img alt="Comedy movie category image with funny characters and bright colorful background" class="w-full h-36 object-cover group-hover:scale-105 transition-transform duration-300" height="225" loading="lazy" src="https://storage.googleapis.com/a1aa/image/28d0a113-6512-447f-5849-33ba553925c5.jpg" width="400"/>
+     <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+      <span class="text-white text-lg font-semibold">
+       Comedy
+      </span>
+     </div>
+    </a>
+    <a class="group block rounded overflow-hidden shadow-lg relative" href="#">
+     <img alt="Drama movie category image showing an emotional scene with soft lighting and intense expressions" class="w-full h-36 object-cover group-hover:scale-105 transition-transform duration-300" height="225" loading="lazy" src="https://storage.googleapis.com/a1aa/image/ab78224d-5665-45b5-31dc-d06c4ba9c74d.jpg" width="400"/>
+     <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+      <span class="text-white text-lg font-semibold">
+       Drama
+      </span>
+     </div>
+    </a>
+    <a class="group block rounded overflow-hidden shadow-lg relative" href="#">
+     <img alt="Horror movie category image showing a dark forest with a scary shadowy figure lurking" class="w-full h-36 object-cover group-hover:scale-105 transition-transform duration-300" height="225" loading="lazy" src="https://storage.googleapis.com/a1aa/image/594f3e66-2237-43a4-c29d-0aa5a7c60ae6.jpg" width="400"/>
+     <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+      <span class="text-white text-lg font-semibold">
+       Horror
+      </span>
+     </div>
+    </a>
+    <a class="group block rounded overflow-hidden shadow-lg relative" href="#">
+     <img alt="Science fiction movie category image showing a futuristic cityscape with spaceships flying" class="w-full h-36 object-cover group-hover:scale-105 transition-transform duration-300" height="225" loading="lazy" src="https://storage.googleapis.com/a1aa/image/5bed85ab-14c3-430a-56ad-5eeec3fb1bb2.jpg" width="400"/>
+     <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+      <span class="text-white text-lg font-semibold">
+       Sci-Fi
+      </span>
+     </div>
+    </a>
+   </div>
+  </section>
+  <!-- Featured Movies Section -->
+  <section class="bg-gray-800 py-10">
+   <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-6 text-white">
+     Featured Movies
+    </h2>
+    <div class="overflow-x-auto scrollbar-hide -mx-4 px-4">
+     <div class="flex space-x-6 min-w-max">
+      <article class="w-48 flex-shrink-0 rounded-lg overflow-hidden shadow-lg bg-gray-900 hover:scale-105 transition-transform duration-300 cursor-pointer">
+       <img alt="Featured movie poster showing a heroic figure surrounded by fire and dramatic sky" class="w-full h-64 object-cover" height="450" loading="lazy" src="https://storage.googleapis.com/a1aa/image/249bc82a-b87a-490a-44e6-72b8516cf2ae.jpg" width="300"/>
+       <div class="p-3">
+        <h3 class="text-lg font-semibold text-white truncate">
+         Inferno Blaze
+        </h3>
+        <p class="text-sm text-gray-400 mt-1">
+         Action, Thriller
+        </p>
+       </div>
+      </article>
+      <article class="w-48 flex-shrink-0 rounded-lg overflow-hidden shadow-lg bg-gray-900 hover:scale-105 transition-transform duration-300 cursor-pointer">
+       <img alt="Featured movie poster with comedy characters laughing and bright colorful background" class="w-full h-64 object-cover" height="450" loading="lazy" src="https://storage.googleapis.com/a1aa/image/1f06ec89-ea0d-42a7-cab3-2757522899c2.jpg" width="300"/>
+       <div class="p-3">
+        <h3 class="text-lg font-semibold text-white truncate">
+         Laugh Riot
+        </h3>
+        <p class="text-sm text-gray-400 mt-1">
+         Comedy
+        </p>
+       </div>
+      </article>
+      <article class="w-48 flex-shrink-0 rounded-lg overflow-hidden shadow-lg bg-gray-900 hover:scale-105 transition-transform duration-300 cursor-pointer">
+       <img alt="Featured movie poster showing a dramatic emotional scene with intense expressions" class="w-full h-64 object-cover" height="450" loading="lazy" src="https://storage.googleapis.com/a1aa/image/393e47ce-5555-402c-941d-08150d78232a.jpg" width="300"/>
+       <div class="p-3">
+        <h3 class="text-lg font-semibold text-white truncate">
+         Heartstrings
+        </h3>
+        <p class="text-sm text-gray-400 mt-1">
+         Drama, Romance
+        </p>
+       </div>
+      </article>
+      <article class="w-48 flex-shrink-0 rounded-lg overflow-hidden shadow-lg bg-gray-900 hover:scale-105 transition-transform duration-300 cursor-pointer">
+       <img alt="Featured movie poster with a horror theme showing a dark figure under a full moon" class="w-full h-64 object-cover" height="450" loading="lazy" src="https://storage.googleapis.com/a1aa/image/206a35f2-d3b3-47cb-7c7c-d02c83e05f14.jpg" width="300"/>
+       <div class="p-3">
+        <h3 class="text-lg font-semibold text-white truncate">
+         Nightmare Realm
+        </h3>
+        <p class="text-sm text-gray-400 mt-1">
+         Horror, Thriller
+        </p>
+       </div>
+      </article>
+      <article class="w-48 flex-shrink-0 rounded-lg overflow-hidden shadow-lg bg-gray-900 hover:scale-105 transition-transform duration-300 cursor-pointer">
+       <img alt="Featured movie poster showing a futuristic city with spaceships flying overhead" class="w-full h-64 object-cover" height="450" loading="lazy" src="https://storage.googleapis.com/a1aa/image/a38aadaf-07d1-4b20-af34-30a01843c1b3.jpg" width="300"/>
+       <div class="p-3">
+        <h3 class="text-lg font-semibold text-white truncate">
+         Galactic Odyssey
+        </h3>
+        <p class="text-sm text-gray-400 mt-1">
+         Sci-Fi, Adventure
+        </p>
+       </div>
+      </article>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- TV Shows Section -->
+  <section class="container mx-auto px-4 py-10">
+   <h2 class="text-3xl font-bold mb-6 text-white">
+    Popular TV Shows
+   </h2>
+   <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
+    <article class="rounded-lg overflow-hidden shadow-lg bg-gray-900 hover:scale-105 transition-transform duration-300 cursor-pointer">
+     <img alt="TV show poster featuring a detective standing in a city at night with neon lights" class="w-full h-64 object-cover" height="450" loading="lazy" src="https://storage.googleapis.com/a1aa/image/e8b418e4-ae0d-4418-a4be-58c864a24629.jpg" width="300"/>
+     <div class="p-3">
+      <h3 class="text-lg font-semibold text-white truncate">
+       City Shadows
+      </h3>
+      <p class="text-sm text-gray-400 mt-1">
+       Crime, Drama
+      </p>
+     </div>
+    </article>
+    <article class="rounded-lg overflow-hidden shadow-lg bg-gray-900 hover:scale-105 transition-transform duration-300 cursor-pointer">
+     <img alt="TV show poster with fantasy characters casting magic spells in a mystical forest" class="w-full h-64 object-cover" height="450" loading="lazy" src="https://storage.googleapis.com/a1aa/image/f8e0fb57-95fc-4e95-905c-54cbe036ce42.jpg" width="300"/>
+     <div class="p-3">
+      <h3 class="text-lg font-semibold text-white truncate">
+       Mystic Realms
+      </h3>
+      <p class="text-sm text-gray-400 mt-1">
+       Fantasy, Adventure
+      </p>
+     </div>
+    </article>
+    <article class="rounded-lg overflow-hidden shadow-lg bg-gray-900 hover:scale-105 transition-transform duration-300 cursor-pointer">
+     <img alt="TV show poster showing a group of friends laughing and having fun in a bright setting" class="w-full h-64 object-cover" height="450" loading="lazy" src="https://storage.googleapis.com/a1aa/image/241b9fd3-972b-4c20-7737-2c65eb73f454.jpg" width="300"/>
+     <div class="p-3">
+      <h3 class="text-lg font-semibold text-white truncate">
+       Friends Forever
+      </h3>
+      <p class="text-sm text-gray-400 mt-1">
+       Comedy, Slice of Life
+      </p>
+     </div>
+    </article>
+    <article class="rounded-lg overflow-hidden shadow-lg bg-gray-900 hover:scale-105 transition-transform duration-300 cursor-pointer">
+     <img alt="TV show poster depicting a post-apocalyptic world with survivors and ruined city" class="w-full h-64 object-cover" height="450" loading="lazy" src="https://storage.googleapis.com/a1aa/image/9f478765-1ad7-4948-75b9-9704dcb01228.jpg" width="300"/>
+     <div class="p-3">
+      <h3 class="text-lg font-semibold text-white truncate">
+       Aftermath
+      </h3>
+      <p class="text-sm text-gray-400 mt-1">
+       Sci-Fi, Drama
+      </p>
+     </div>
+    </article>
+    <article class="rounded-lg overflow-hidden shadow-lg bg-gray-900 hover:scale-105 transition-transform duration-300 cursor-pointer">
+     <img alt="TV show poster featuring superheroes in action poses with city skyline background" class="w-full h-64 object-cover" height="450" loading="lazy" src="https://storage.googleapis.com/a1aa/image/f4ac854b-a99b-4a22-b9d8-a4305bb0be14.jpg" width="300"/>
+     <div class="p-3">
+      <h3 class="text-lg font-semibold text-white truncate">
+       Guardians United
+      </h3>
+      <p class="text-sm text-gray-400 mt-1">
+       Action, Superhero
+      </p>
+     </div>
+    </article>
+   </div>
+  </section>
+  <!-- New & Popular Section -->
+  <section class="bg-gray-800 py-10">
+   <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-6 text-white">
+     New &amp; Popular
+    </h2>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
+     <div class="rounded overflow-hidden shadow-lg bg-gray-900 hover:scale-105 transition-transform duration-300 cursor-pointer">
+      <img alt="New and popular movie poster showing a thrilling scene with intense action" class="w-full h-48 object-cover" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/4217ec33-f035-4f0b-3e40-4e88ae400d16.jpg" width="200"/>
+      <div class="p-2">
+       <h3 class="text-sm font-semibold text-white truncate">
+        Edge of Fear
+       </h3>
+      </div>
+     </div>
+     <div class="rounded overflow-hidden shadow-lg bg-gray-900 hover:scale-105 transition-transform duration-300 cursor-pointer">
+      <img alt="New and popular movie poster showing a romantic couple embracing in sunset" class="w-full h-48 object-cover" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/25038267-f508-498e-e100-db84c59f7e5a.jpg" width="200"/>
+      <div class="p-2">
+       <h3 class="text-sm font-semibold text-white truncate">
+        Sunset Love
+       </h3>
+      </div>
+     </div>
+     <div class="rounded overflow-hidden shadow-lg bg-gray-900 hover:scale-105 transition-transform duration-300 cursor-pointer">
+      <img alt="New and popular animated movie poster featuring colorful animated characters in a fantasy world" class="w-full h-48 object-cover" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/ea7481c7-8151-4029-8530-fd04ced95f9f.jpg" width="200"/>
+      <div class="p-2">
+       <h3 class="text-sm font-semibold text-white truncate">
+        Magic Quest
+       </h3>
+      </div>
+     </div>
+     <div class="rounded overflow-hidden shadow-lg bg-gray-900 hover:scale-105 transition-transform duration-300 cursor-pointer">
+      <img alt="New and popular movie poster showing a detective in a dark alley with rain" class="w-full h-48 object-cover" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/09440984-f896-40ef-ad19-6a7188d07ac5.jpg" width="200"/>
+      <div class="p-2">
+       <h3 class="text-sm font-semibold text-white truncate">
+        Dark Pursuit
+       </h3>
+      </div>
+     </div>
+     <div class="rounded overflow-hidden shadow-lg bg-gray-900 hover:scale-105 transition-transform duration-300 cursor-pointer">
+      <img alt="New and popular sci-fi movie poster showing space exploration with astronauts and planets" class="w-full h-48 object-cover" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/bf67d8ab-0e43-4158-63b0-ba47543ba128.jpg" width="200"/>
+      <div class="p-2">
+       <h3 class="text-sm font-semibold text-white truncate">
+        Starbound
+       </h3>
+      </div>
+     </div>
+     <div class="rounded overflow-hidden shadow-lg bg-gray-900 hover:scale-105 transition-transform duration-300 cursor-pointer">  <a href="https://www.google.com">
+      <img alt="New and popular comedy movie poster showing a group of friends partying and laughing" class="w-full h-48 object-cover" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/3f78fae4-8ce7-4778-302e-93e1aa6dddad.jpg" width="200"/>
+      <div class="p-2">
+       <h3 class="text-sm font-semibold text-white truncate">
+        Party Time
+       </h3>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-10 mt-auto">
+   <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <div>
+     <h3 class="text-white font-bold mb-4 text-lg">
+      StreamFlix
+     </h3>
+     <p class="text-sm leading-relaxed">
+      StreamFlix is your ultimate destination for movies, TV shows, and exclusive originals. Watch anytime, anywhere.
+     </p>
+    </div>
+    <div>
+     <h4 class="text-white font-semibold mb-4">
+      Company
+     </h4>
+     <ul class="space-y-2 text-sm">
+      <li>
+       <a class="hover:text-red-600 transition" href="#">
+        About Us
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-red-600 transition" href="#">
+        Careers
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-red-600 transition" href="#">
+        Press
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-red-600 transition" href="#">
+        Blog
+       </a>
+      </li>
+     </ul>
+    </div>
+    <div>
+     <h4 class="text-white font-semibold mb-4">
+      Support
+     </h4>
+     <ul class="space-y-2 text-sm">
+      <li>
+       <a class="hover:text-red-600 transition" href="#">
+        Help Center
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-red-600 transition" href="#">
+        Terms of Service
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-red-600 transition" href="#">
+        Privacy Policy
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-red-600 transition" href="#">
+        Contact Us
+       </a>
+      </li>
+     </ul>
+    </div>
+    <div>
+     <h4 class="text-white font-semibold mb-4">
+      Follow Us
+     </h4>
+     <div class="flex space-x-4 text-xl">
+      <a aria-label="Facebook" class="hover:text-red-600 transition" href="#">
+       <i class="fab fa-facebook-square">
+       </i>
+      </a>
+      <a aria-label="Twitter" class="hover:text-red-600 transition" href="#">
+       <i class="fab fa-twitter-square">
+       </i>
+      </a>
+      <a aria-label="Instagram" class="hover:text-red-600 transition" href="#">
+       <i class="fab fa-instagram-square">
+       </i>
+      </a>
+      <a aria-label="YouTube" class="hover:text-red-600 transition" href="#">
+       <i class="fab fa-youtube-square">
+       </i>
+      </a>
+     </div>
+    </div>
+   </div>
+   <div class="mt-8 text-center text-sm text-gray-500">
+    © 2024 StreamFlix. All rights reserved.
+   </div>
+  </footer>
+  <script>
+   const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+ </body>
+</html>
